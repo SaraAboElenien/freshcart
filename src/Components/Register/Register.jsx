@@ -128,7 +128,7 @@ export default function Register() {
             />
          </button> :
          <> <div className="d-flex align-items-center justify-content-between mt-3">
-           <button type='submit' disabled={!(isValid && dirty)} className='btn bg-main text-white '>Register</button><p >You do not have an account?  <Link className='fs-3x fw-bolder link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ' to={'/login'}>Login </Link></p>
+           <button type='submit' disabled={!(isValid && dirty)} className='btn bg-main text-white '>Register</button><p >Already have an account?<Link className='fs-3x fw-bolder link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ' to={'/login'}>Login </Link></p>
            </div>
           </>
 }

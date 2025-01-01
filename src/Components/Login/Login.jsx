@@ -84,7 +84,7 @@ export default function Login() {
           </button> :
                    <> <div className="d-flex align-items-center justify-content-between mt-3">
 
-          <button type='submit' disabled={!(isValid && dirty)} className='btn bg-main text-white'>Login</button> <p >Already have an account?  <Link className='fs-3x fw-bolder link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ' to={'/register'}>Register </Link></p> 
+          <button type='submit' disabled={!(isValid && dirty)} className='btn bg-main text-white'>Login</button> <p >You do not have an account? <Link className='fs-3x fw-bolder link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ' to={'/register'}>Register </Link></p> 
           </div>
           <Link to='/ForgotPassword'>Forgot your password?</Link>
           </>
