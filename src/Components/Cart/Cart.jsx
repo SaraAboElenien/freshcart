@@ -37,7 +37,6 @@ const [cartId, setCartId ] = useState();
         token: localStorage.getItem("userToken")
       }
     });
-    console.log(data);
     setCart(data);
   }
   async function clearCart() {
