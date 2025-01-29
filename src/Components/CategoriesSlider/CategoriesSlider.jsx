@@ -16,7 +16,7 @@ export default function CategoriesSlider() {
     };
 
     async function getAllCategories() {
-        const { data } = await axios.get('https://route-ecommerce.onrender.com/api/v1/categories')
+        const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/categories')
         setCategories(data.data);
     }
 

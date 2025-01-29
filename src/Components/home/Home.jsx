@@ -8,7 +8,7 @@ export default function Home() {
   const [products, setProducts] = useState([])
 
   async function getAllProducts() {
-    const { data } = await axios.get('https://route-ecommerce.onrender.com/api/v1/products')
+    const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/products')
     setProducts(data.data);
   }
 

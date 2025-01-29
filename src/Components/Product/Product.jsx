@@ -9,7 +9,7 @@ function Product({ product }) {
 
     async function addProductToCart(productId) {
 
-        const { data } = await axios.post('https://route-ecommerce.onrender.com/api/v1/cart', {
+        const { data } = await axios.post('https://ecommerce.routemisr.com/api/v1/cart', {
             productId
         }, {
             headers: {
@@ -30,7 +30,7 @@ function Product({ product }) {
     async function addProductToFavorite(productId) {
         try {
             const { data } = await axios.post(
-                'https://route-ecommerce.onrender.com/api/v1/wishlist',
+                'https://ecommerce.routemisr.com/api/v1/wishlist',
                 { productId },
                 { headers: { token: userToken || localStorage.getItem('userToken') } }
             );
