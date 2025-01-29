@@ -22,7 +22,7 @@ const ResetPassword = () => {
       .then(response => {
         console.log(response);
         setSuccess(true);
-        navigate('/login'); // Redirect to login page upon successful password reset
+        navigate('/login'); 
       })
       .catch(error => {
         console.error('Error:', error);

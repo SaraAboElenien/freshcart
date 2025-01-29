@@ -16,7 +16,7 @@ const [cartId, setCartId ] = useState();
   async function getLoggedInCartProducts() {
     setIsLoading(true)
     try {
-      const { data } = await axios.get('https://route-ecommerce.onrender.com/api/v1/cart', {
+      const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/cart', {
         headers: {
           token: localStorage.getItem('userToken')
         }
@@ -32,7 +32,7 @@ const [cartId, setCartId ] = useState();
   }
 
   async function removeProductFromCart(productId) {
-    const { data } = await axios.delete('https://route-ecommerce.onrender.com/api/v1/cart/' + productId, {
+    const { data } = await axios.delete('https://ecommerce.routemisr.com/api/v1/cart/' + productId, {
       headers: {
         token: localStorage.getItem("userToken")
       }
@@ -41,7 +41,7 @@ const [cartId, setCartId ] = useState();
     setCart(data);
   }
   async function clearCart() {
-    const { data } = await axios.delete('https://route-ecommerce.onrender.com/api/v1/cart', {
+    const { data } = await axios.delete('https://ecommerce.routemisr.com/api/v1/cart', {
       headers: {
         token: localStorage.getItem("userToken")
       }
@@ -61,7 +61,7 @@ const [cartId, setCartId ] = useState();
       if (count === 0) {
         removeProductFromCart(productId);
       } else {
-        const { data } = await axios.put('https://route-ecommerce.onrender.com/api/v1/cart/' + productId, {
+        const { data } = await axios.put('https://ecommerce.routemisr.com/api/v1/cart/' + productId, {
           count
         }, {
           headers: {

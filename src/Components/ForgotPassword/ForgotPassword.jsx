@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
-  const [step, setStep] = useState(1); // Step 1: Request reset code, Step 2: Confirm reset code
+  const [step, setStep] = useState(1); 
   const [error, setError] = useState('');
 
   const validationSchema = step === 1 ? 

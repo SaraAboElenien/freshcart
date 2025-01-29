@@ -53,14 +53,13 @@ export default function Wishlist() {
 
   async function addProductToCart(productId) {
 
-    const { data } = await axios.post('https://route-ecommerce.onrender.com/api/v1/cart', {
+    const { data } = await axios.post('https://ecommerce.routemisr.com/api/v1/cart', {
         productId
     }, {
         headers: {
             token: localStorage.getItem('userToken')
         }
     })
-    // console.log(data);
     if (data.success) {
         toast.success('Product added to cart successfully' , {
             duration: 4000,
@@ -103,7 +102,7 @@ export default function Wishlist() {
                     <p className='fw-bolder'> Price: {data.price} L.E</p>
                     
                     <i className="fa-solid fa-xmark p-2 close-btn rounded-2 position-absolute cursor-pointer  bottom-0 end-0 m-3" onClick={() => removeFromWishList(data.id)}></i>
-                    {/* Here you can add the addToCart function if needed */}
+                    {/* Here i can add the addToCart function if needed */}
                     {     <button onClick={() => addProductToCart(data.id)} className='btn bg-main text-white w-50 mt-2'>Add To Cart</button>
 
 }

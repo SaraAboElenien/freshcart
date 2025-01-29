@@ -10,7 +10,7 @@ export default function Categories() {
 
   async function getAllCategories() {
     setIsLoading(true)
-    const { data } = await axios.get('https://route-ecommerce.onrender.com/api/v1/categories')
+    const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/categories')
     setIsLoading(false)
     setCategories(data.data);
   }

@@ -14,7 +14,7 @@ function ProductDetails() {
     async function getProductDetails() {
         setIsLoading(true);
         try {
-            const { data } = await axios.get(`https://route-ecommerce.onrender.com/api/v1/products/${id}`);
+            const { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`);
             setProductDetails(data.data);
         } catch (error) {
             console.error('Error fetching product details:', error);
@@ -30,7 +30,7 @@ function ProductDetails() {
     async function addProductToCart(productId) {
         try {
             const { data } = await axios.post(
-                'https://route-ecommerce.onrender.com/api/v1/cart',
+                'https://ecommerce.routemisr.com/api/v1/cart',
                 { productId },
                 { headers: { token: userToken || localStorage.getItem('userToken') } }
             );
@@ -50,7 +50,7 @@ function ProductDetails() {
     async function addProductToFavorite(productId) {
         try {
             const { data } = await axios.post(
-                'https://route-ecommerce.onrender.com/api/v1/wishlist',
+                'https://ecommerce.routemisr.com/api/v1/wishlist',
                 { productId },
                 { headers: { token: userToken || localStorage.getItem('userToken') } }
             );
