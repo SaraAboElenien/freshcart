@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import CategoriesSlider from '../CategoriesSlider/CategoriesSlider';
-import Product from '../Product/Product';
+// import Product from '../Product/Product';
 import MainSlider from '../MainSlider/MainSlider';
 import SearchableProducts from '../SearchableProducts/SearchableProducts';
 export default function Home() {
@@ -20,8 +20,8 @@ export default function Home() {
   return <> 
     <MainSlider />
     <SearchableProducts /> 
-    <CategoriesSlider />
-    <div className="container mt-5 mb-5">
+    {/* <CategoriesSlider /> */}
+    {/* <div className="container mt-5 mb-5">
     <div className="row">
       {products.map((product) => {
         return <div key={product.id} className="col-md-3">
@@ -29,6 +29,6 @@ export default function Home() {
         </div>
       })}
     </div>
-    </div>
+    </div> */}
   </>
 }

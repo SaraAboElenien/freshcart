@@ -20,16 +20,16 @@ export default function MainSlider() {
     return <>
 
 
-<div className="container-fluid py-5 mb-5 mt-5 hero-header ">
+<div className="container-fluid py-5   hero-header ">
     <div className="container py-5 ">
         <div className="row g-5 align-items-center">
             <div className="col-md-12 col-lg-7">
                 <h4 style={{color:'#ffb524'}} className='mb-3 fa-2x fw-bolder'>100% Free Delivery</h4>
                 <h1 style={{color:'#0aad0a'}} className="mb-5 display-3 ">Whatever You Want & Wherever You Are</h1>
-                <div className=" position-relative mx-auto  d-flex align-items-center ">
+                {/* <div className=" position-relative mx-auto  d-flex align-items-center ">
                     <input className="  py-3  rounded-pill flex-grow-1 w-75 border border-warning" type="text" placeholder='  Search' />
                     <button style={{right:0, color:'#0aad0a'}} className="btn bg-main border-2  border-warning position-absolute py-3 px-4 rounded-pill text-white" type='submit' >Submit Now</button>
-                </div>
+                </div> */}
             </div>
             <div className="col-md-12 col-lg-5">
                 <Slider {...settings}>
