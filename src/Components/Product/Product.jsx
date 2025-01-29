@@ -54,8 +54,8 @@ function Product({ product }) {
     }
 
     return (
-        <div className="container ">
-            <div className="row col-md-12">
+        <div className="container d-flex justify-content-center">
+            <div className="row col-md-10">
                 <div className="product overflow-hidden px-2 py-3 cursor-pointer">
                     <Link to={'/productDetails/' + product.id} className='a'>
                         <img className='w-100' src={product.imageCover} alt="" />
