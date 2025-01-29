@@ -29,23 +29,27 @@ function ProductDetails() {
 
     async function addProductToCart(productId) {
         try {
-            const { data } = await axios.post(
-                'https://ecommerce.routemisr.com/api/v1/cart',
-                { productId },
-                { headers: { token: userToken || localStorage.getItem('userToken') } }
-            );
-            if (data.success) {
-                toast.success('Product added to cart successfully', { duration: 4000, position: 'top-center' });
+            const { data } = await axios.post('https://ecommerce.routemisr.com/api/v1/cart', {
+                productId
+            }, {
+                headers: {
+                    token: localStorage.getItem('userToken')
+                }
+            });
+            // The API returns data.status instead of data.success
+            if (data.status === 'success') {
+                toast.success('Product added to cart successfully', {
+                    duration: 4000,
+                    position: 'top-center'
+                });
             } else {
                 toast.error('Failed to add product to cart');
             }
         } catch (error) {
             console.error('Error adding product to cart:', error);
-            toast.error('Failed to add product to cart');
+            toast.error(error.response?.data?.message || 'Failed to add product to cart');
         }
     }
-
-
 
     async function addProductToFavorite(productId) {
         try {
@@ -54,14 +58,17 @@ function ProductDetails() {
                 { productId },
                 { headers: { token: userToken || localStorage.getItem('userToken') } }
             );
-            if (data.success) {
-                toast.success('Product added to wishlist successfully', { duration: 4000, position: 'top-center' });
+            if (data.status === 'success') {
+                toast.success('Product added to wishlist successfully', {
+                    duration: 4000,
+                    position: 'top-center'
+                });
             } else {
                 toast.error('Failed to add product to wishlist');
             }
         } catch (error) {
             console.error('Error adding product to wishlist:', error);
-            toast.error('Failed to add product to wishlist');
+            toast.error(error.response?.data?.message || 'Failed to add product to wishlist');
         }
     }
 

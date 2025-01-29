@@ -52,21 +52,25 @@ export default function Wishlist() {
 
 
   async function addProductToCart(productId) {
-
-    const { data } = await axios.post('https://ecommerce.routemisr.com/api/v1/cart', {
-        productId
-    }, {
-        headers: {
-            token: localStorage.getItem('userToken')
+    try {
+        const { data } = await axios.post('https://ecommerce.routemisr.com/api/v1/cart', {
+            productId
+        }, {
+            headers: {
+                token: localStorage.getItem('userToken')
+            }
+        });
+        if (data.status === 'success') {
+            toast.success('Product added to cart successfully', {
+                duration: 4000,
+                position: 'top-center'
+            });
+        } else {
+            toast.error('Failed to add product to cart');
         }
-    })
-    if (data.success) {
-        toast.success('Product added to cart successfully' , {
-            duration: 4000,
-            position: 'top-center'
-        })
-    } else{
-        toast.error('Failed to add product to cart')
+    } catch (error) {
+        console.error('Error adding product to cart:', error);
+        toast.error(error.response?.data?.message || 'Failed to add product to cart');
     }
 }
 
