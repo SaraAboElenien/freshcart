@@ -24,6 +24,7 @@ import ForgotPassword from './Components/ForgotPassword/ForgotPassword';
 import Address from './Components/Address/Address';
 import AllOrders from './Components/AllOrders/AllOrders'
 import Favorite from './Components/Favorite/Favorite';
+import SearchableProducts from './Components/SearchableProducts/SearchableProducts';
 
 
 let routers = createHashRouter([
