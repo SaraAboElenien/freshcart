@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import CategoriesSlider from '../CategoriesSlider/CategoriesSlider';
 import Product from '../Product/Product';
 import MainSlider from '../MainSlider/MainSlider';
+import SearchableProducts from '../SearchableProducts/SearchableProducts';
 export default function Home() {
 
   const [products, setProducts] = useState([])
@@ -18,7 +19,7 @@ export default function Home() {
 
   return <> 
     <MainSlider />
-
+    <SearchableProducts /> 
     <CategoriesSlider />
     <div className="container mt-5 mb-5">
     <div className="row">

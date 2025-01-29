@@ -39,6 +39,7 @@ let routers = createHashRouter([
 {path:"brands/:id" , element:<ProtectedRoute><BrandDetails/></ProtectedRoute>},
 {path:"address/:cartId" , element:<ProtectedRoute><Address/></ProtectedRoute>},
 {path:"Favorite" , element:<ProtectedRoute><Favorite/></ProtectedRoute>},
+{path:"search" , element:<ProtectedRoute><SearchableProducts/></ProtectedRoute>},
 {path:"ResetPassword" , element:<ResetPassword/>},
 {path:"UpdateUserData" , element:<UpdateUserData/>},
 {path:"ForgotPassword" , element:<ForgotPassword/>},
